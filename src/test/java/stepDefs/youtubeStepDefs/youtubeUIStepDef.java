@@ -47,7 +47,6 @@ public class youtubeUIStepDef {
     @Then("^I will be brought to youtube's page with the proper browser$")
     public void weAccessYoutubeSite(){
         driver.get("https://youtube.com");
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         WebElement searchBar = driver.findElement(By.xpath("//input[@id=\"search\"]"));
         String criteria = "Elden Ring Malenia";
         searchBar.click();
